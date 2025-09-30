@@ -17,14 +17,10 @@ int main() {
         int years = currentyear - birthyear;
         int months = currentmonth - birthmonth;
         int days = currentday - birthday;
-
-        // ✅ Borrow days if needed
         if (days < 0) {
-            days += 30;  // assume 30 days per month
+            days += 30; 
             months -= 1;
         }
-
-        // ✅ Borrow months if needed
         if (months < 0) {
             months += 12;
             years -= 1;
